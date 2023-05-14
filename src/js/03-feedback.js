@@ -16,10 +16,10 @@ form.addEventListener('input', throttle(evt => {
 
 
 form.addEventListener('submit', evt => {
-    event.preventDefault();
+    evt.preventDefault();
     const {
         elements: {email, message},
-    } = event.currentTarget;
+    } = evt.currentTarget;
     console.log({email: email.value, message: message.value});
 
     evt.currentTarget.reset();
